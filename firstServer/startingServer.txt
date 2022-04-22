@@ -45,4 +45,5 @@ Current package.json scripts content:::
   }
 
 ^^ note the "devDependencies".  You can run this via CLI: (dev isn't a command, but RUN is)
+    -- tell npm to run, and target the dev script:
     > npm run dev
