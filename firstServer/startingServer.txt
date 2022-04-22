@@ -1,0 +1,48 @@
+Typical Node Application Project
+
+================================================================
+Section2 =======================================================
+================================================================
+
+-- 2.8 ------------------------- First HTTP server
+
+Usually, to startup the app, the command is used:
+    npm start
+
+This command tells NPM to look in the SCRIPT section of the
+    package.json file in the application folder
+    - in there, it runs whatever is listed next to "start"
+
+Initial setting:
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+
+This "start" script can fire off any and all data required to get an application up and running
+ - This is an easy go to for developers to see what and in what order things need to happen in order to fire up an application
+
+To use this method, navigate to the folder where the application (or NodeJS file exists...where package.json is too), and execute 
+    $ npm start
+
+    ^^^ this will start up the node server
+
+-- 2.11 ------------------------ JSON, NodeMon, & Adv Functionality
+
+npm i nodemon --save-dev
+// Adds an entry to the "devDependencies" attribute of a package.json file, on the command line.
+----> Development dependencies are intended as development-only packages, that are unneeded in production
+
+Current package.json scripts content:::
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Mark Wilkinson",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+
+^^ note the "devDependencies".  You can run this via CLI: (dev isn't a command, but RUN is)
+    > npm run dev
