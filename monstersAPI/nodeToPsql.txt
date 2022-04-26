@@ -1,0 +1,18 @@
+1. Create the DB
+2. Create the tables
+3. Insert the data (if required)
+4. Create User:
+    a. CREATE USER node_user WITH SUPERUSER PASSWORD '<pw>';
+    ## This will give NodeJS the access required to interact with the DB
+    - in PgAdmin4, scroll down in the browser until you see:
+        Login/Group Roles (this will verify the user has been created)
+        # NOTE: can also create roles here
+    VIEW THE ROLES:
+    monstersdb=# SELECT * FROM pg_user;
+    usename  | usesysid | usecreatedb | usesuper | userepl | usebypassrls |  passwd  | valuntil | useconfig
+    -----------+----------+-------------+----------+---------+--------------+----------+----------+-----------
+    postgres  |       10 | t           | t        | t       | t            | ******** |          |
+    node_user |    24687 | f           | t        | f       | f            | ******** |          |
+    (2 rows)
+
+    
