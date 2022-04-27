@@ -10,6 +10,7 @@ const {
 } = require("../secrets/db_configuration");
 
 // similar to mongoDB in Node
+// use destructuring to pass the data into the const above, and use that data in the block below
 const pool = new Pool({
   user,
   host,
@@ -18,7 +19,4 @@ const pool = new Pool({
   port,
 });
 
-pool.query("select * from monsters", (err, res) => {
-  if (err) return console.log(err);
-  console.log(res.rows);
-});
+module.exports = pool;
