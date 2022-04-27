@@ -15,4 +15,8 @@
     node_user |    24687 | f           | t        | f       | f            | ******** |          |
     (2 rows)
 
+
+USE the PG package for NodeJS.
+    npm i pg --save (saves as a dependency)
+    https://node-postgres.com
     
